@@ -16,24 +16,22 @@ public class CustomStack<T> {
 
         list = new ArrayList<>(size);
 
-        list.trimToSize();
         list.add(element);
 
+    }
+
+    public T pop() {
+
+        T element = list.remove(list.size() - 1);
+
+        return element;
 
     }
 
-    public void pop() {
-
-        list.remove(list.size() - 1);
-        list.trimToSize();
-
-    }
-
-    public T pop(T element) { return element; }
+    public T pops(T element) { return element; }
 
     public T peek() {
 
-        list.trimToSize();
 
         return list.get(list.size() - 1);
 

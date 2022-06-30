@@ -9,7 +9,11 @@ public class Client {
         customStack.push(14);
         customStack.push(99);
 
-        System.out.println(customStack);
+        System.out.println(customStack.pop());
+
+        //customStack.push(43);
+
+        System.out.println(customStack.pop());
 
     }
 }

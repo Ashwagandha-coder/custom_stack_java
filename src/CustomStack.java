@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class CustomStack<T> {
+public class CustomStack<T> implements MethodStack<T> {
 
     private ArrayList<T> list;
 
@@ -11,14 +11,10 @@ public class CustomStack<T> {
 
     public CustomStack(int size) { this.size = size; }
 
+    public void init() { list = new ArrayList<>(size); }
 
-    public void push(T element) {
 
-        list = new ArrayList<>(size);
-
-        list.add(element);
-
-    }
+    public void push(T element) { list.add(element); }
 
     public T pop() {
 
@@ -28,14 +24,11 @@ public class CustomStack<T> {
 
     }
 
-    public T pops(T element) { return element; }
-
-    public T peek() {
+    public int getSize() { return list.size(); }
 
 
-        return list.get(list.size() - 1);
+    public T peek() { return list.get(list.size() - 1); }
 
-    }
 
 
 }
